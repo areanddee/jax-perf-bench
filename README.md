@@ -1,6 +1,6 @@
 # JAX Performance Benchmarking Framework
 
-A comprehensive, extensible framework for benchmarking, storing, and analyzing performance data for JAX-based scientific computing projects. Designed for atmospheric modeling and other compute-intensive applications.
+A comprehensive, extensible framework for benchmarking, storing, and analyzing performance data for JAX-based scientific computing projects. Designed specfically for atmospheric modeling kernels and other compute-intensive applications.
 
 ## Features
 
@@ -321,12 +321,12 @@ If you use this framework in your research, please cite:
 ```bibtex
 @software{jax_perf_bench,
   title = {JAX Performance Benchmarking Framework},
-  author = {Your Name},
-  year = {2024},
-  url = {https://github.com/yourusername/jax-perf-bench}
+  author = {Richard Loft},
+  year = {2025},
+  url = {https://github.com/areanddee/jax-perf-bench}
 }
 ```
 
 ## Acknowledgments
 
-Designed for atmospheric modeling projects using tensor train compression and JAX.
+Designed for benchmarking test kernels in JAX.
