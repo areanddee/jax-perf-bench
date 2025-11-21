@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jax-perf-bench"
+version = "0.1.0"
+description = "Performance benchmarking framework for JAX-based scientific computing"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+keywords = ["jax", "benchmarking", "performance", "scientific-computing", "atmospheric-modeling"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering",
+]
+
+dependencies = [
+    "jax>=0.4.0",
+    "numpy>=1.20.0",
+]
+
+[project.optional-dependencies]
+plotting = [
+    "matplotlib>=3.5.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "mypy>=0.950",
+]
+all = [
+    "matplotlib>=3.5.0",
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/jax-perf-bench"
+Documentation = "https://github.com/yourusername/jax-perf-bench#readme"
+Repository = "https://github.com/yourusername/jax-perf-bench"
+"Bug Tracker" = "https://github.com/yourusername/jax-perf-bench/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["perfbench*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
